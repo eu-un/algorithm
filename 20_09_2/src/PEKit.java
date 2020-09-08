@@ -1,7 +1,7 @@
 public class PEKit {
 	public static int solution(int n, int lost[], int reserve[]) {
 		int answer = 0;
-		int[] student = new int[n+1];
+		int[] student = new int[n + 1];
 		
 		// 학생 수 초기화(무조건 다 가져왔다고 생각)
 		// student[i] = 0 ⇒ 체육복 없음
