@@ -9,7 +9,7 @@ public class AppDev {
         int[] distribute = new int[progresses.length];
         
         for(int i = 0; i < progresses.length; i++) {
-        	
+        	 
         	// 배포까지 걸리는 일 수
         	distribute[i] = (100 - progresses[i]) / speeds[i];
         	
