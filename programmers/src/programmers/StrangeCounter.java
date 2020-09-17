@@ -1,17 +1,15 @@
-package programmers;
-
 public class StrangeCounter {
 	static long strangeCounter(long t) {
 		long time_top = 1;
 		long value_top = 3;
 		
-		// °¢ ÁÖ±âÀÇ ¸Ç À§ÀÇ °ª ±¸ÇÏ±â
+		// ê° ì£¼ê¸°ì˜ ë§¨ ìœ„ì˜ ê°’ êµ¬í•˜ê¸°
 		while(time_top <= t) {
 			time_top += value_top;
 			value_top = time_top + 2;
 		}
 		
-		// ±¸ÇÏ°í ½ÍÀº ½Ã°£ÀÇ ´ÙÀ½ ÁÖ±â time_top¿¡¼­ ±¸ÇÏ°í ½ÍÀº ½Ã°£ »©¸é µÊ
+		// êµ¬í•˜ê³  ì‹¶ì€ ì‹œê°„ì˜ ë‹¤ìŒ ì£¼ê¸° time_topì—ì„œ êµ¬í•˜ê³  ì‹¶ì€ ì‹œê°„ ë¹¼ë©´ ë¨
 		return (time_top - t);
     }
 }
