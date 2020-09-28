@@ -1,5 +1,3 @@
-package alphago;
-
 public class MergeTwoSortedLists {
 	public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
 		ListNode result_node = new ListNode();
