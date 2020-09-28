@@ -1,4 +1,3 @@
-package alphago;
 
 import java.util.ArrayList;
 import java.util.List;
