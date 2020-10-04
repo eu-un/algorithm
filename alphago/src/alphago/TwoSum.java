@@ -16,7 +16,7 @@ public class TwoSum {
 					result[0] = i;
 					result[1] = j;
 				} // if end
-			} // for end
+			} // for end 
 		} // for end
 		return result;
 	}
