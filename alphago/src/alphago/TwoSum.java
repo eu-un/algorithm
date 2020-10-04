@@ -1,8 +1,8 @@
 package alphago;
 
 /*
-	Runtime : 61 ms
-	Memory : 39.1 MB
+	Runtime : 62 ms
+	Memory : 38.9 MB
 */
 
 public class TwoSum {
@@ -15,6 +15,7 @@ public class TwoSum {
 				if(nums[i] + nums[j] == target) {
 					result[0] = i;
 					result[1] = j;
+					break;
 				} // if end
 			} // for end 
 		} // for end
