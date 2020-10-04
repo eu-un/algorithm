@@ -1,18 +1,16 @@
-package alphago;
-
 /*
- *	Å×½ºÆ® 1 ¡µ	Åë°ú (0.04ms, 51.9MB)
-	Å×½ºÆ® 2 ¡µ	Åë°ú (0.03ms, 51.8MB)
-	Å×½ºÆ® 3 ¡µ	Åë°ú (0.08ms, 52.7MB)
-	Å×½ºÆ® 4 ¡µ	Åë°ú (0.18ms, 52.6MB)
-	Å×½ºÆ® 5 ¡µ	Åë°ú (0.61ms, 51.8MB)
-	Å×½ºÆ® 6 ¡µ	Åë°ú (17.36ms, 52.6MB)
-	Å×½ºÆ® 7 ¡µ	Åë°ú (43.46ms, 53.1MB)
-	Å×½ºÆ® 8 ¡µ	Åë°ú (150.96ms, 53.2MB)
-	Å×½ºÆ® 9 ¡µ	Åë°ú (25.31ms, 57.1MB)
-	Å×½ºÆ® 10 ¡µ	Åë°ú (4841.41ms, 59.5MB)
-	Å×½ºÆ® 11 ¡µ	Åë°ú (0.05ms, 52.3MB)
-	Å×½ºÆ® 12 ¡µ	Åë°ú (0.05ms, 51.9MB)
+ *	í…ŒìŠ¤íŠ¸ 1 ã€‰	í†µê³¼ (0.04ms, 51.9MB)
+	í…ŒìŠ¤íŠ¸ 2 ã€‰	í†µê³¼ (0.03ms, 51.8MB)
+	í…ŒìŠ¤íŠ¸ 3 ã€‰	í†µê³¼ (0.08ms, 52.7MB)
+	í…ŒìŠ¤íŠ¸ 4 ã€‰	í†µê³¼ (0.18ms, 52.6MB)
+	í…ŒìŠ¤íŠ¸ 5 ã€‰	í†µê³¼ (0.61ms, 51.8MB)
+	í…ŒìŠ¤íŠ¸ 6 ã€‰	í†µê³¼ (17.36ms, 52.6MB)
+	í…ŒìŠ¤íŠ¸ 7 ã€‰	í†µê³¼ (43.46ms, 53.1MB)
+	í…ŒìŠ¤íŠ¸ 8 ã€‰	í†µê³¼ (150.96ms, 53.2MB)
+	í…ŒìŠ¤íŠ¸ 9 ã€‰	í†µê³¼ (25.31ms, 57.1MB)
+	í…ŒìŠ¤íŠ¸ 10 ã€‰	í†µê³¼ (4841.41ms, 59.5MB)
+	í…ŒìŠ¤íŠ¸ 11 ã€‰	í†µê³¼ (0.05ms, 52.3MB)
+	í…ŒìŠ¤íŠ¸ 12 ã€‰	í†µê³¼ (0.05ms, 51.9MB)
  * */
 
 
@@ -23,17 +21,17 @@ public class MakeBigNumber {
 		StringBuilder sb = new StringBuilder();
 		int n_len = number.length();
 		
-		// ¼±ÅÃÇÏ´Â ¼öÀÇ ±æÀÌ ex) number = 1231234, k = 3 -> select_num = 7 - 3 = 4
+		// ì„ íƒí•˜ëŠ” ìˆ˜ì˜ ê¸¸ì´ ex) number = 1231234, k = 3 -> select_num = 7 - 3 = 4
 		int select_num = n_len - k;
 		char maxNum;
 		int start = 0, end = 0;
 		
-		// ¼±ÅÃµÉ ¼ö ÀÖ´Â ¼ıÀÚÀÇ ±æÀÌ¸¸Å­ for
+		// ì„ íƒë  ìˆ˜ ìˆëŠ” ìˆ«ìì˜ ê¸¸ì´ë§Œí¼ for
 		for(int i = 0; i < select_num; i++) {
 			maxNum = number.charAt(start);
 			
-			// ¼±ÅÃ indexº¸´Ù Å« ¼ıÀÚ°¡ ³ª¿À¸é ÇØ´ç ¼ıÀÚ¸¦ maxNum¿¡ ÀúÀåÇÏ°í,
-        	// ±× index¸¦ end¿¡ ÀúÀå
+		// ì„ íƒ indexë³´ë‹¤ í° ìˆ«ìê°€ ë‚˜ì˜¤ë©´ í•´ë‹¹ ìˆ«ìë¥¼ maxNumì— ì €ì¥í•˜ê³ ,
+        	// ê·¸ indexë¥¼ endì— ì €ì¥
 			for(int j = start; j <= (i + k); j++) {
 				if(maxNum < number.charAt(j)) {
 					maxNum = number.charAt(j);
@@ -43,9 +41,9 @@ public class MakeBigNumber {
 			
 			sb.append(maxNum);
 			
-			// maxNum¿¡ ÀúÀåÇÏ°í ³ª¸é ´ÙÀ½ index·Î °¡±â
+			// maxNumì— ì €ì¥í•˜ê³  ë‚˜ë©´ ë‹¤ìŒ indexë¡œ ê°€ê¸°
 			start = end + 1;
-			end = start; // endÀÇ index¸¦ startÀÇ index·Î
+			end = start; // endì˜ indexë¥¼ startì˜ indexë¡œ
 		} // for end
 		
         return sb.toString();
